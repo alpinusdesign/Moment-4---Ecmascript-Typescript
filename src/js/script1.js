@@ -1,0 +1,1 @@
+let exampleVariable1 = 1;

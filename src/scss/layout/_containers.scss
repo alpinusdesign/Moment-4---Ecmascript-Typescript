@@ -1,0 +1,7 @@
+/* - General text container - */
+// - Used to limit the width of text-elements to maintain readability.
+.text-container,
+.text-container > *
+{
+  max-width: 65rem;
+}

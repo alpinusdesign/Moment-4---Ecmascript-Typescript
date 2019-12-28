@@ -1,0 +1,12 @@
+// - Matches a dark background with white text, and bright background with the primary text color.
+@function match-bg-color($bg-color)
+{
+    @if lightness($bg-color) < 10
+    {
+        @return #ffffff;
+    }
+    @else
+    {
+        @return $text-primary;
+    }
+}

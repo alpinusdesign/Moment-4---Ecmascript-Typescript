@@ -1,0 +1,63 @@
+section#home
+{
+    color: match-bg-color($bg-home);
+    background: $bg-home url("../img/home-background.jpg") center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+
+    .content-area
+    {
+        position: relative;
+        width: $section-wide;
+        height: 100%;
+
+        .text-container
+        {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            bottom: 15%;
+
+            h1
+            {
+                order: 2;
+                color: $orange;
+            }
+            h2
+            {
+                order: 1;
+                font-size: 2.4rem;
+                font-weight: 100;
+            }
+            p
+            {
+                order: 3;
+            }
+            span
+            {
+                order: 4;
+                margin-top: 1em;
+            }
+        }
+    }
+
+    @include bp-small
+    {
+        &
+        {
+            height: auto;
+            
+            .content-area
+            {
+                position: static;
+                .text-container
+                {
+                    position: static;
+                    text-align: center;
+                }
+            }
+
+        }
+    }
+}

@@ -1,0 +1,22 @@
+section
+{
+    padding: 4rem 0;
+
+    // - Used to limit the width of the section content, while still allowing sections to span the entire screen.
+    .content-area
+    {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+
+    // - Change background color every other section.
+    &:nth-child(odd)
+    {
+        background-color: $bg-odd
+    }
+    &:nth-child(even)
+    {
+        background-color: $bg-even
+    }
+}

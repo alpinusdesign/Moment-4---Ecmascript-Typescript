@@ -1,0 +1,24 @@
+/* - Button styling - */
+.button,
+input[type=submit]
+{
+    display: inline-block;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+    background-color: $blue;
+    padding: .5em 1.25em;
+    border-radius: 4rem;
+
+    &:hover
+    {
+        background-color: complement($blue);
+        font-size: 105%;
+    }
+
+    &:active
+    {
+        background-color: lighten(complement($blue), 15%);
+    }
+}

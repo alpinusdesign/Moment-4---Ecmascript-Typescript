@@ -1,0 +1,48 @@
+section#services
+{
+    .content-area
+    {
+        @include flexBox;
+        justify-content: space-between;
+        width: $section-narrow;
+
+        .text-container
+        {
+            margin-bottom: 2em;
+        }
+    }
+
+    .col--desktop-only
+    {
+        align-items: center;
+        
+        .text-container
+        {
+            text-align: center;
+
+            blockquote
+            {
+                color: $text-muted;
+                font-style: italic;
+                font-size: 3rem;
+                // - Adds ""-marks around blockquote.
+                quotes: "\0022" "\0022" "\0022" "\0022";
+
+                &:before
+                {
+                    content: open-quote;
+                }
+                &:after
+                {
+                    content: close-quote;
+                }
+                + small
+                {
+                    color: $text-bright;
+                    font-weight: bold;
+                    font-size: 3.2rem;
+                }
+            }
+        }
+    }
+}

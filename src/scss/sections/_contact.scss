@@ -1,0 +1,49 @@
+section#contact
+{
+    .content-area
+    {
+        @include flexBox;
+        flex-direction: column;
+        text-align: center;
+        width: $section-narrow;
+
+        .text-container
+        {
+            flex-basis:100%;
+            text-align: center;
+            margin: 0 auto;
+            margin-bottom: 3rem;
+        }
+
+        form
+        {
+            margin: 0 auto;
+        }
+    }
+
+    ul
+    {
+        padding: 1em 0;
+
+        li
+        {
+            display: inline;
+            font-size: 3.2rem;
+    
+            a
+            {
+                color: $grey-dark;
+
+                &:hover
+                {
+                    color: $yellow;
+                }
+            }
+        }
+        
+        li:not(:last-child)
+        {
+            padding-right: 1em;
+        }
+    }
+}

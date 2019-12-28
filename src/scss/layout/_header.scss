@@ -1,0 +1,123 @@
+header
+{
+    // - Position the header over the first section.
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    nav
+    {
+        display: flex;
+        justify-content: space-between;
+        width: $section-wide;
+        max-width: 100%;
+        padding: 1rem;
+        margin: 0 auto;
+
+        .logo
+        {
+            font-size: 3rem;
+            color: $orange;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        a
+        {
+            color: white;
+
+            &:hover
+            {
+                color: $orange;
+            }
+        }
+
+        // - Styling for the desktop navigation.
+        &#desktop-nav
+        {
+            ul
+            {
+                li
+                {
+                    display: inline;
+                    padding-right: 2rem;
+                }
+            }
+        }
+
+        // - Styling for the hamburger navigation.
+        &#hamburger-nav
+        {
+            display: none;
+            font-size: 2.25rem;
+            background-color: darken($grey-dark,5%);
+            color: white;
+            text-align: center;
+
+            // - The hamburger buttons functional element: a hidden checkbox used to toggle the hamburger menu.
+            #hamburger-checkbox
+            {
+                flex-basis: 100%;
+                display: none;
+            }
+
+            // - The hamburger buttons visual element.
+            #hamburger-label
+            {
+                cursor: pointer;
+                position: absolute;
+                left: 2rem;
+                font-size: 3rem;
+            }
+
+            // - Hide hamburger menu until the hamburger-button is toggled.
+            #hamburger-menu
+            {
+                display: none;
+            }
+
+            // - Reveal the hamburger menu when the hamburger-button is toggled.
+            #hamburger-checkbox:checked ~ #hamburger-menu
+            {
+                display: block;
+            }
+
+            // - Turn the hamburger icon orange when the hamburger-button is toggled.
+            #hamburger-checkbox:checked ~ #hamburger-label
+            {
+                color: $orange;
+            }
+
+            ul
+            {
+                li
+                {
+                    display: block;
+                    padding: 1rem 0;
+                }
+            }
+        }
+
+    }
+
+    @include bp-small
+    {
+        &
+        {
+            position: static;
+        }
+        
+        // - Hide desktop-navigation.
+        & nav#desktop-nav
+        {
+            display: none;
+        }
+
+        // - Display hamburger-navigation.
+        & nav#hamburger-nav
+        {
+            display: block;
+        }
+    }
+}

@@ -1,0 +1,29 @@
+/* - Color Pallete - */
+// - Grey tones
+$grey-dark: #242321;
+$grey-bright: #F8F8F8;
+// - Hues
+$blue: #4495FF;
+$orange: #FFB12A;
+$yellow: #ffcd57;
+
+
+
+/* - Fonts - */
+$font-stack: 'Roboto', sans-serif;
+$text-primary: $grey-dark;
+$text-bright: lighten($grey-dark, 10%);
+$text-muted: lighten($grey-dark, 50%);
+
+
+
+/* - Section background-colors - */
+$bg-home: black;
+$bg-even: #F8F8F8;
+$bg-odd: #ffffff;
+
+
+
+/* - Section widths - */
+$section-wide: 160rem;
+$section-narrow: 120rem;

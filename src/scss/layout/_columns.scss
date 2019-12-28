@@ -1,0 +1,25 @@
+/* - Standard column - */
+// - Takes up half of a container.
+.col
+{
+    @include flexBox();
+    flex-basis: 50%;
+
+    @include bp-small
+    {
+        flex-basis: 100%;
+    }
+}
+
+// - Hides on mobile.
+.col--desktop-only
+{
+    @extend .col;
+    @include bp-small
+    {
+        &
+        {
+            display: none;
+        }
+    }
+}

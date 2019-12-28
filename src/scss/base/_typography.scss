@@ -1,0 +1,50 @@
+/* - General Typography - */
+html
+{
+  box-sizing: border-box;
+  font-size: 10px;
+  font-family: $font-stack;
+  color: $text-primary;
+}
+
+body
+{
+  font-size: 1.8rem;
+  line-height: 1.4;
+}
+
+*,
+*:before,
+*:after
+{
+  box-sizing: inherit;
+}
+
+/* - Headings - */
+h1,
+h2,
+h3,
+h4
+{
+  font-weight: bold;
+}
+
+h1
+{
+  font-size: 4rem;
+}
+h2
+{
+  font-size: 3.2rem;
+}
+h3
+{
+  font-size: 2.4rem;
+}
+
+/* - Links - */
+a
+{
+  text-decoration: none;
+  transition: .3s;
+}

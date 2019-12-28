@@ -1,0 +1,60 @@
+section#about
+{
+    .content-area
+    {
+        @include flexBox;
+        justify-content: space-between;
+        width: $section-narrow;
+
+        .text-container
+        {
+            flex-basis: 100%;
+            max-width: 100%;
+            margin-bottom: 2.5rem;
+            text-align: center;
+            & > *
+            {
+                margin: 0 auto;
+            }
+        }
+
+        .about-card
+        {
+            flex-basis: 30%;
+
+            img
+            {
+                display: block;
+                background-color: $yellow;
+                max-width: 20rem;
+                height: auto;
+                border-radius: 50%;
+                margin: 0 auto 1rem;
+            }
+
+            h3
+            {
+                text-align: center;
+            }
+        }
+    }
+    
+    @include bp-small
+    {
+        .content-area
+        {
+            flex-direction: column;
+        }
+
+        .about-card
+        {
+            text-align: center;
+            margin: 1em 0;
+            
+            img
+            {
+                width: 50%;
+            }
+        }
+    }
+}
